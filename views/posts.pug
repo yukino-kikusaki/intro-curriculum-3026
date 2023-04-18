@@ -44,14 +44,14 @@ html(lang="ja")
             form(method="post" action="/posts/delete")
               input(type="hidden" name="id" value=post.id)
               - let deleteButtonColor = (currentTheme === 'light' ? 'btn-outline-danger' : 'btn-danger');
-              button(type="submit").btn.btn-sm(class=deleteButtonColor)
+              button.btn.btn-sm(type="submit" class=deleteButtonColor)
                 i.bi-trash
     - let footerColor = (currentTheme === 'light' ? 'bg-white' : 'bg-dark');
     div.fixed-bottom.p-4(class=footerColor)
       form(method="post" action="/posts" name="message-form").container-fluid.row.g-3
         div.col-12
           - let textareaColor = (currentTheme === 'light' ? '' : 'bg-dark text-white');
-          textarea(name="content" rows="4" placeholder="Ctrl(Command)+Enterで送信できます").form-control(class=textareaColor)
+          textarea.form-control(name="content" rows="4" placeholder="Ctrl(Command)+Enterで送信できます" class=textareaColor)
         div.col-12
           button(type="submit").btn.btn-primary.float-end
             i.bi-send
